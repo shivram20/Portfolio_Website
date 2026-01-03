@@ -1,23 +1,42 @@
-import {} from 'react'
-import {Link} from "react-router-dom"
-import './Css/Navbar.css'
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import "./Css/Navbar.css";
 
-function Navbar(){
-  return(
-    <>
-        <div className="header">
-           <div className="left">
-              <img className="logo"  src="./mypic.jpg" alt="Loading peofile pic"/>
-              <h1>SHIVRAM</h1>
-           </div>
-          <div className="right">
-            <Link className="ns nsh"to="/Home">Home</Link>
-            <Link className="ns"to="/About">About</Link>
-            <Link className="ns"to="/projects">projects</Link>
-            <Link className="ns" to="/Contact">Contact</Link>
-        </div>
-        </div>
-    </>
-  )
+function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
+
+  return (
+    <div className="header">
+      <div className="left">
+        <h1>SHIVRAM</h1>
+      </div>
+
+      {/* Menu Icon */}
+      <div className="menu-icon" onClick={() => setOpen(!open)}>
+        ☰
+      </div>
+
+      <div className={`right ${open ? "open" : ""}`}>
+        <NavLink className="ns" to="/home" onClick={closeMenu}>
+          Home
+        </NavLink>
+
+        <NavLink className="ns" to="/about" onClick={closeMenu}>
+          About
+        </NavLink>
+
+        <NavLink className="ns" to="/projects" onClick={closeMenu}>
+          Projects
+        </NavLink>
+
+        <NavLink className="ns" to="/contact" onClick={closeMenu}>
+          Contact
+        </NavLink>
+      </div>
+    </div>
+  );
 }
-export default Navbar
+
+export default Navbar;

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #f0f6ff;
+  color: #1e40af;
+}
+
+/* Page Layout */
+.page {
+  min-height: calc(100vh - 70px);
+  padding: 60px;
+  background-color: #ffffff;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  color: #1e40af;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+p {
+  color: #1e40af;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #1e40af;
+  text-decoration: none;
+}

@@ -1,10 +1,9 @@
-import {} from 'react'
-
-function Projects(){
-  return(
+function Projects() {
+  return (
     <>
-      <h2>Peojects page</h2>
+      <h2>Projects Page</h2>
     </>
-  )
+  );
 }
-export default Projects
+
+export default Projects;
