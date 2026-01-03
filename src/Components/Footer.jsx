@@ -3,18 +3,21 @@ import "./Css/Footer.css";
 
 function Footer() {
   const [showFooter, setShowFooter] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        // scrolling up
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < lastScrollY) {
+        // User scrolling UP
         setShowFooter(true);
-      } else {
-        // scrolling down
+      } else if (currentScrollY > lastScrollY) {
+        // User scrolling DOWN
         setShowFooter(false);
       }
-      setLastScrollY(window.scrollY);
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,9 +27,23 @@ function Footer() {
   return (
     <footer className={`footer ${showFooter ? "show" : "hide"}`}>
       <div className="footer-content">
-        <a href="https://github.com/shivram20">Github</a>
-        <a href="https://www.linkedin.com/in/shivram-vasava-824883363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkdin</a>
-        <a href="https://www.instagram.com/shivram_20x?igsh=MWo5ZzJxdjd3dW5ieg==">Instagram</a>
+        <a href="https://github.com/shivram20" target="_blank" rel="noreferrer">
+          Github
+        </a>
+        <a
+          href="https://www.linkedin.com/in/shivram-vasava-824883363"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://www.instagram.com/shivram_20x"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
         <span>© 2026 All Rights Reserved</span>
       </div>
     </footer>
