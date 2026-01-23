@@ -1,0 +1,122 @@
+/* Page background */
+.cf-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(218, 231, 239);
+}
+
+/* Main card */
+.cf-card {
+    width: 900px;
+    height: 450px;
+    background: white;
+    display: flex;
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 25px 50px rgba(197, 193, 193, 0.25);
+}
+
+/* Left panel */
+.cf-left {
+    width: 40%;
+    padding: 50px 35px;
+    background: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cf-left h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cf-left p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    color:black;
+    font-weight: 500;
+}
+
+.cf-left button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cf-left button:hover {
+    transform: scale(1.05);
+}
+
+/* Right panel */
+.cf-right {
+    width: 60%;
+    padding: 40px;
+}
+
+.cf-right h2 {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Inputs */
+.cf-right input,
+.cf-right textarea,
+.cf-right select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.cf-right textarea {
+    height: 90px;
+    resize: none;
+}
+
+/* Submit button */
+.cf-right button {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cf-right button:hover {
+    background: #3b82f6;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .cf-card {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .cf-left,
+    .cf-right {
+        width: 100%;
+    }
+}
