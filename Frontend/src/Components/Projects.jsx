@@ -92,7 +92,7 @@ function Projects() {
               frontend–backend interaction.
             </p>
             <div className="project-links">
-              <a href="https://shivram20.github.io/gmca/" target="_blank">
+              <a href="https://shivram.infinityfree.me/GMCA/#!/" target="_blank">
                 Live
               </a>
               <a href="https://github.com/shivram20/gmca" target="_blank">
